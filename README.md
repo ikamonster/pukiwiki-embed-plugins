@@ -1,6 +1,22 @@
-# PukiWiki外部サービス埋め込みプラグイン
+# PukiWiki用外部サービス埋め込みプラグイン
 
-各種ウェブサービスのHTMLウィジェットを埋め込むためのPukiWiki用プラグインの使用法一覧です。
+各種ウェブサービスのHTMLウィジェットを埋め込むための[PukiWiki](https://pukiwiki.osdn.jp/)用プラグインです。
+
+|対象PukiWikiバージョン|対象PHPバージョン|
+|:---:|:---:|
+|PukiWiki 1.5.3 (UTF-8)|PHP 7.4|
+
+<br>
+
+## インストール
+
+``*.inc.php`` を PukiWiki の plugin ディレクトリに配置してください。
+
+<br>
+
+## 使い方
+
+下記から利用したいプラグインの説明をご覧ください。
 
 **凡例**
 
@@ -8,6 +24,8 @@
 - [] … 省略でき必要に応じて記述します
 - | … |で区切られた項目のうち１つを記述します
 - {} … 中カッコ内の引数は任意の順序で記述できます
+
+<br><br>
 
 ## 動画・画像
 
@@ -158,7 +176,9 @@ tenor(id,aspect,width)
 - aspect … 画像の縦横比。tenorサイト発行の埋め込みコード内「data-aspect-ratio="XXX"」の「XXX」部分。省略時の既定値は1.0
 - width  … 画像の幅（px）。省略時の既定値は640
 
-**音楽・音声
+<br><br>
+
+## 音楽・音声
 
 ### Apple Music
 
@@ -263,7 +283,9 @@ voicy(channelID,showID[,width])
 - showID    … 番組ID。Voicyサイト発行の埋め込みコード内「``//voicy.jp/embed/channel/XXXX/YYYYY``」の「YYYYY」部分
 - width     … プレイヤーの幅（px）。省略すると領域いっぱいに表示
 
-**3DCG・VR
+<br><br>
+
+## 3DCG・VR
 
 ### Sketchfab
 
@@ -296,7 +318,9 @@ styly(id[,width])
 - id       … コンテンツID。STYLYサイトのコンテンツページURL「``//gallery.styly.cc/embed?g=XXXXXXXXXXX``」の「XXXXXXXXXXX」部分
 - width    … ウィジェットの幅（px）。省略時の既定値は 640
 
-**SNS
+<br><br>
+
+## SNS
 
 ### Twitter
 
@@ -314,25 +338,9 @@ twitter(type,user[,[id][,[width][,[height][,theme]]]])
 - height … ウィジェットの高さ（px）。省略時の既定値は 500。0 で高さ無制限
 - theme  … dark：暗い色調で表示。省略すると明るい色調で表示
 
-**記事
+<br><br>
 
-### ウェブサイト全般
-
-ブログカードを表示する。
-
-
-```
-blogcard(url)
-```
-
-- url … リンク先ページのURL
-
-※サムネイル画像を生成するため、PHPにGDモジュールが必要です。なくても動作しますが、重くなるため推奨しません。~
-※リンク先ページの情報はデフォルトで1週間キャッシュされます。キャッシュを消去するには次のコマンドを実行してください。
-
- （ウィキのURL）?plugin=blogcard&query=clear
-
-<br>
+## 記事
 
 ### note
 
@@ -345,7 +353,9 @@ note(id)
 
 - id … 記事ID。noteサイト発行の埋め込みコード内「``//note.com/embed/notes/XXXXXXXXXXXXX``」の「XXXXXXXXXXXXX」部分
 
-**スライド
+<br><br>
+
+## スライド
 
 ### SlideShare
 
@@ -393,7 +403,9 @@ googleslides(id[,[width][,[delay][,[autoStart][,loop]]]])
 - autoStart … 1：プレイヤーの読み込み後すぐにスライドショーを開始する。省略時の既定値は 0（オフ）
 - loop      … 1：最後のスライドまで到達したらスライドショーを再度開始する省略時の既定値は 0（オフ）
 
-**地図
+<br><br>
+
+## 地図
 
 ### Googleマイマップ
 
@@ -425,7 +437,9 @@ itsmonavi(lat,lon[,[level][,[width][,height]]])
 - width … 地図の幅（px）。省略時の既定値は 640
 - height … 地図の高さ（px）。省略時の既定値は 480
 
-**フォーム
+<br><br>
+
+## フォーム
 
 ### Googleフォーム
 
@@ -440,7 +454,9 @@ googleforms(id[,[width][,height]])
 - width  … ウィジェットの幅（px）。省略時の既定値は 640
 - height … ウィジェットの高さ（px）。省略時の既定値は 382
 
-**カレンダー
+<br><br>
+
+## カレンダー
 
 ### Googleカレンダー
 
@@ -455,7 +471,9 @@ googlecalendar([width][,[height],id[,id2,id3,...]])
 - height      … カレンダーの高さ（px）。省略時の既定値は 600
 - 第3引数以降 … カレンダーID。Googleカレンダーサイト発行の埋め込みコード内「src=XXXXXXXXXXX」の「XXXXXXXXXXX」部分。複数指定可能
 
-**ワープロ・表計算
+<br><br>
+
+## ワープロ・表計算
 
 ### Googleスプレッドシート
 
@@ -484,7 +502,9 @@ googledocs(docID[,height])
 - docID   … ドキュメントID。Googleドキュメントサイト発行の埋め込みコード内「``//docs.google.com/document/d/e/XXXXX/pub``」の「XXXXX」部分
 - height  … ウィジェットの高さ（px）。省略時の既定値は 400
 
-**開発
+<br><br>
+
+## 開発
 
 ### GitHub Gist
 
@@ -561,7 +581,9 @@ scratch(id[,[width][,height]])
 - width  … ウィジェットの幅（px）。省略すると標準の幅
 - height … ウィジェットの高さ（px）。省略すると標準の高さ
 
-**ショッピング
+<br><br>
+
+## ショッピング
 
 ### Steam
 
@@ -588,7 +610,9 @@ itchio(id)
 
 - id … ページID。itch.ioサイト発行の埋め込みコード内「``//itch.io/embed/XXXXXX``」の「XXXXXX」部分
 
-**クラウドファンディング・寄付
+<br><br>
+
+## クラウドファンディング・寄付
 
 ### Kickstarter
 
