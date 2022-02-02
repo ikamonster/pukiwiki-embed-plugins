@@ -12,7 +12,7 @@
 
 下記GitHubページからダウンロードした ``*.inc.php`` を PukiWiki の plugin ディレクトリに配置してください。
 
-https://github.com/ikamonster/pukiwiki-embed-plugins
+[https://github.com/ikamonster/pukiwiki-embed-plugins](https://github.com/ikamonster/pukiwiki-embed-plugins)
 
 <br>
 
