@@ -10,7 +10,9 @@
 
 ## インストール
 
-``*.inc.php`` を PukiWiki の plugin ディレクトリに配置してください。
+下記GitHubページからダウンロードした ``*.inc.php`` を PukiWiki の plugin ディレクトリに配置してください。
+
+https://github.com/ikamonster/pukiwiki-embed-plugins
 
 <br>
 
