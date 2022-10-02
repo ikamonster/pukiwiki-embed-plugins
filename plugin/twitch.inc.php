@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-twitch.inc.php, v1.0 2020 M.Taniguchi
+twitch.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 Twitchチャンネル・動画・チャットを埋め込むプラグイン。
@@ -60,8 +60,8 @@ function plugin_twitch_convert() {
 			$widgetTag .= <<<EOT
 <style>
 ._p_twitch{position:relative;width:100%;height:auto;min-width:0;min-height:0;padding:0;border:none;overflow:hidden}
-._p_twitch:before{display:block;content:'';padding:${aspectVideo}% 0 0 0;margin:0;background:transparent}
-._p_twitch._p_twitch-chat:before{padding-top:${aspectChat}%}
+._p_twitch:before{display:block;content:'';padding:{$aspectVideo}% 0 0 0;margin:0;background:transparent}
+._p_twitch._p_twitch-chat:before{padding-top:{$aspectChat}%}
 ._p_twitch>iframe{position:absolute;top:0;left:0;width:100%;height:100%;padding:0;max-width:100%;max-height:auto}
 </style>
 EOT;

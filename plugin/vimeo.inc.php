@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-vimeo.inc.php, v1.0 2020 M.Taniguchi
+vimeo.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 Vimeo動画再生プレイヤーを表示するプラグイン。
@@ -47,7 +47,7 @@ function plugin_vimeo_convert() {
 			$widgetTag .= <<<EOT
 <style>
 ._p_vimeo{position:relative;width:100%;height:100%;min-width:0;min-height:0;padding:0;border:none;overflow:hidden}
-._p_vimeo:before{display:block;content:'';padding:${aspect}% 0 0 0;margin:0;background:transparent}
+._p_vimeo:before{display:block;content:'';padding:{$aspect}% 0 0 0;margin:0;background:transparent}
 ._p_vimeo>iframe{position:absolute;top:0;left:0;width:100%;height:100%;max-width:100%;max-height:100%;padding:0;margin:0;border:none}
 </style>
 EOT;

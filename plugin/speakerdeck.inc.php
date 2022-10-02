@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-speakerdeck.inc.php, v1.0 2020 M.Taniguchi
+speakerdeck.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 Speaker Deckのスライドを埋め込むプラグイン。
@@ -95,7 +95,7 @@ html,body{width:100%;height:auto;margin:0;padding:0;border:none;overflow:hidden;
 </style>
 </head>
 <body>
-<script async class="speakerdeck-embed" data-id="${id}"${start} data-ratio="${ratio}" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="{$id}"{$start} data-ratio="{$ratio}" src="//speakerdeck.com/assets/embed.js"></script>
 </body>
 </head>
 EOT;

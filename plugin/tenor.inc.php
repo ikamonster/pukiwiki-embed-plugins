@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-tenor.inc.php, v1.0 2020 M.Taniguchi
+tenor.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 tenor画像を埋め込むプラグイン。
@@ -41,7 +41,7 @@ function plugin_tenor_convert() {
 		static	$included = false;
 		if (!$included) {
 			$widgetTag .= <<<EOT
-<style>._p_tenor{position:relative;width:100%;height:auto;min-width:0;min-height:0;padding:0;border:none;overflow:hidden;max-width:${width}px}</style>
+<style>._p_tenor{position:relative;width:100%;height:auto;min-width:0;min-height:0;padding:0;border:none;overflow:hidden;max-width:{$width}px}</style>
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 EOT;
 		}

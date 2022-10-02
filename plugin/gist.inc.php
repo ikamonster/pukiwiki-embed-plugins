@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-gist.inc.php, v1.0 2020 M.Taniguchi
+gist.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 GitHub Gistを埋め込むプラグイン。
@@ -63,7 +63,7 @@ html,body{width:100%;height:100%;margin:0;padding:0;border:none;overflow:auto;-w
 </style>
 </head>
 <body>
-<script src="${url}"></script>
+<script src="{$url}"></script>
 </body>
 </head>
 EOT;

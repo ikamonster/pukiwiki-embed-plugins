@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-nicodou.inc.php, v1.0 2020 M.Taniguchi
+nicodou.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 ニコニコ動画再生プレイヤーを表示するプラグイン。
@@ -52,7 +52,7 @@ function plugin_nicodou_convert() {
 			$widgetTag .= <<<EOT
 <style>
 ._p_nicodou{position:relative;width:100%;height:auto;min-width:0;min-height:0;padding:0;border:none;overflow:hidden}
-._p_nicodou:before{display:block;content:'';padding:${aspect}% 0 0 0;margin:0;background:transparent}
+._p_nicodou:before{display:block;content:'';padding:{$aspect}% 0 0 0;margin:0;background:transparent}
 ._p_nicodou>iframe{position:absolute;top:0;left:0;width:100%;height:100%;padding:0;margin:0;max-width:100%;max-height:100%;overflow:hidden}
 </style>
 EOT;
@@ -86,15 +86,15 @@ function plugin_nicodou_action() {
 <meta name="robots" content="noindex,nofollow,noarchive"/>
 <style>
 html,body{width:100%;height:auto;margin:0;padding:0;border:none;overflow:hidden;box-sizing:border-box;-webkit-touch-callout:none;-webkit-text-size-adjust:100%}
-._p_nicodou{position:relative;width:100%;max-width:${width}px;height:100%;max-height:${height}px;overflow:hidden}
-._p_nicodou:before{display:block;content:'';padding:${aspect}% 0 0 0;margin:0;background:transparent}
+._p_nicodou{position:relative;width:100%;max-width:{$width}px;height:100%;max-height:{$height}px;overflow:hidden}
+._p_nicodou:before{display:block;content:'';padding:{$aspect}% 0 0 0;margin:0;background:transparent}
 ._p_nicodou>iframe{position:absolute;top:0;left:0;width:100%;height:100%;padding:0;margin:0;max-width:100%;max-height:100%;overflow:hidden}
 </style>
 </head>
 <body>
 <div class="_p_nicodou">
-	<script type="application/javascript" src="https://embed.nicovideo.jp/watch/${id}/script?w=${width}&h=${height}${from}"></script>
-	<noscript><a href="https://www.nicovideo.jp/watch/${id}">https://www.nicovideo.jp/watch/${id}</a></noscript>
+	<script type="application/javascript" src="https://embed.nicovideo.jp/watch/{$id}/script?w={$width}&h={$height}{$from}"></script>
+	<noscript><a href="https://www.nicovideo.jp/watch/{$id}">https://www.nicovideo.jp/watch/{$id}</a></noscript>
 </div>
 </body>
 </head>

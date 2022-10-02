@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-styly.inc.php, v1.0 2020 M.Taniguchi
+styly.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 STYLYウィジェットを埋め込むプラグイン。
@@ -43,7 +43,7 @@ function plugin_styly_convert() {
 			$widgetTag .= <<<EOT
 <style>
 ._p_styly{position:relative;width:100%;height:auto;min-width:0;min-height:0;padding:0;border:none;overflow:hidden}
-._p_styly:before{display:block;content:'';padding:${aspect}% 0 0 0;margin:0;background:transparent}
+._p_styly:before{display:block;content:'';padding:{$aspect}% 0 0 0;margin:0;background:transparent}
 ._p_styly>iframe{position:absolute;top:0;left:0;width:100%;height:100%;padding:0;margin:0;max-width:100%;max-height:auto}
 </style>
 EOT;

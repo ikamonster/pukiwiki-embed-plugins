@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-kickstarter.inc.php, v1.0 2020 M.Taniguchi
+kickstarter.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 KickStarterウィジェットを埋め込むプラグイン。
@@ -62,8 +62,8 @@ function plugin_kickstarter_convert() {
 <style>
 ._p_kickstarter{position:relative;width:100%;height:100%;min-width:0;min-height:0;padding:0;border:none;overflow:hidden}
 ._p_kickstarter:before{display:block;content:'';padding:0;margin:0;background:transparent}
-._p_kickstarter._p_kickstarter-card:before{padding-top:${aspectCard}%}
-._p_kickstarter._p_kickstarter-video:before{padding-top:${aspectVideo}%}
+._p_kickstarter._p_kickstarter-card:before{padding-top:{$aspectCard}%}
+._p_kickstarter._p_kickstarter-video:before{padding-top:{$aspectVideo}%}
 ._p_kickstarter>iframe{position:absolute;top:0;left:0;width:100%;height:100%;min-width:0;min-height:0;max-width:100%;max-height:100%;padding:0;margin:0;border:none}
 </style>
 EOT;

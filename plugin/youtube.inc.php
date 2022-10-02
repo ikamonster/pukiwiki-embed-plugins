@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-youtube.inc.php, v1.0 2020 M.Taniguchi
+youtube.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 YouTube動画再生プレイヤーを表示するプラグイン。
